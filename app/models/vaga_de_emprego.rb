@@ -1,0 +1,2 @@
+class VagaDeEmprego < ApplicationRecord
+end

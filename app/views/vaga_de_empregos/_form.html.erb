@@ -1,0 +1,32 @@
+<%= form_with(model: vaga_de_emprego) do |form| %>
+  <% if vaga_de_emprego.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(vaga_de_emprego.errors.count, "error") %> prohibited this vaga_de_emprego from being saved:</h2>
+
+      <ul>
+        <% vaga_de_emprego.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :nome, style: "display: block" %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div>
+    <%= form.label :explicacao, style: "display: block" %>
+    <%= form.text_field :explicacao %>
+  </div>
+
+  <div>
+    <%= form.label :remuneracao, style: "display: block" %>
+    <%= form.text_field :remuneracao %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
