@@ -10,12 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_18_230653) do
+ActiveRecord::Schema[7.0].define(version: 2022_04_19_022526) do
   create_table "candidatos", force: :cascade do |t|
     t.string "nome"
     t.string "data_nascimento"
     t.string "email"
     t.string "cpf"
+    t.string "senha"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "empregadors", force: :cascade do |t|
+    t.string "nome"
+    t.string "cpf"
+    t.string "email"
     t.string "senha"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
